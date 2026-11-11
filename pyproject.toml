@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cache-quest"
+version = "1.0.0"
+description = "A tiny offline terminal mystery with seeded worlds and local saves"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+cache-quest = "cache_quest.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cache_quest*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
